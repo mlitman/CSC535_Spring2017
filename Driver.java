@@ -4,8 +4,7 @@ public class Driver
 {
 	public static void main(String[] elephant)
 	{
-		Deck d = new Deck();
-		d.shuffle();
-		d.display();
+		Blackjack game = new Blackjack();
+		game.play();
 	}
 }

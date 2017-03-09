@@ -12,6 +12,11 @@ public class Card
 		this.value = value;
 	}
 	
+	public int getValue()
+	{
+		return this.value;
+	}
+	
 	public void display()
 	{
 		System.out.println(this.displayName + " of " + this.displaySuit + "(" + this.value + ")");

@@ -1,34 +1,20 @@
 
 public class Player
 {
-	private String firstName;
-	private String lastName;
-	private int jerseyNumber;
+	private Hand theHand;
 	
-	Player(String firstName, String lastName, int jerseyNumber)
+	public Player()
 	{
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.jerseyNumber = jerseyNumber;
+		this.theHand = new Hand();
 	}
 	
-	public String getFirstName()
+	public void takeCard(Card c)
 	{
-		return this.firstName;
+		this.theHand.addCard(c);
 	}
 	
-	public String getLastName() 
+	public void showHand()
 	{
-		return lastName;
-	}
-
-	public int getJerseyNumber() 
-	{
-		return jerseyNumber;
-	}
-
-	void display()
-	{
-		System.out.println(this.firstName + " " + this.lastName);
+		this.theHand.display();
 	}
 }

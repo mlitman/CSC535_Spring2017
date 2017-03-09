@@ -3,9 +3,10 @@ import java.util.Random;
 public class Deck 
 {
 	private Card[] theCards;
-	
+	private int top;
 	public Deck()
 	{
+		this.top = 0;
 		this.theCards = new Card[52];
 		String[] suits = {"H","D","C","S"};
 		String[] displayNames = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
@@ -21,8 +22,16 @@ public class Deck
 		}
 	}
 	
+	public Card getTop()
+	{
+		Card cardToReturn = this.theCards[this.top];
+		this.top++;
+		return cardToReturn;
+	}
+	
 	public void shuffle()
 	{
+		this.top = 0;
 		Random r = new Random();
 		int pos1;
 		int pos2;
